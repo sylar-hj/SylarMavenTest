@@ -253,16 +253,16 @@ jenkins最新版本
 - HTML Report Plugin
 
 jenkins正确显示html文件需要执行的命令：
+
 `System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")`
 
 ### 5、jenkins集成maven
 
 
 
-
 ##   三、已知问题：
 ### 1、min和max显示为NaN
-xml转换html插件原因，jtl转换为html后，待解决；
+xml转换html插件原因，jtl转换为html后，这两个字段的值显示不出来，待解决；
 ### 2、performance图形化报告为空
 performance的数据源确认有数据，构建了多次，只有一次有图形展示，目前还不清楚原因。
 
