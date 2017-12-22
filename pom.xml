@@ -87,12 +87,20 @@
                         </goals>
                     </execution>
                 </executions>
-                <!--这里有个大坑，慎设置参数-->
+                <!--这里有大坑，慎设置参数-->
                 <configuration>
+                    <testFilesIncluded>
+                        <jMeterTestFile>baidu.jmx</jMeterTestFile>
+                        <!--<jMeterTestFile>test2.jmx</jMeterTestFile>-->
+                    </testFilesIncluded>
                     <resultsFileFormat>xml</resultsFileFormat>
                     <!--<generateReports>true</generateReports>-->
                     <ignoreResultFailures>true</ignoreResultFailures>
-                    <testResultsTimestamp>false</testResultsTimestamp>
+                    <testResultsTimestamp>true</testResultsTimestamp>
+                    <appendResultsTimestamp>true</appendResultsTimestamp>
+                    <resultsFileNameDateFormat>yyyy-MM-dd-HH-mm-ss</resultsFileNameDateFormat>
+                    <!--使用mvn verify –DskipTests=true来跳过不需要执行的脚本-->
+                    <!--<skipTests>${skipTests}</skipTests>-->
                 </configuration>
             </plugin>
 
@@ -194,6 +202,7 @@
                         <configuration>
                             <!-- test可以在环境变量中定义，也可以将下面写成绝对地址 -->
                             <outputDirectory>${project.build.directory}/jmeter/html</outputDirectory>
+                            <!--<outputDirectory>${project.build.directory}/jmeter/html1</outputDirectory>-->
                             <resources>
                                 <resource>
                                     <!-- basedir标识所有工程 -->
@@ -205,7 +214,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
 
     </build>
