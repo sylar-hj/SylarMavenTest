@@ -92,7 +92,7 @@
                     <resultsFileFormat>xml</resultsFileFormat>
                     <!--<generateReports>true</generateReports>-->
                     <ignoreResultFailures>true</ignoreResultFailures>
-                    <!--<testResultsTimestamp>false</testResultsTimestamp>-->
+                    <testResultsTimestamp>false</testResultsTimestamp>
                 </configuration>
             </plugin>
 
