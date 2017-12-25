@@ -90,7 +90,7 @@
                 <!--这里有大坑，慎设置参数-->
                 <configuration>
                     <testFilesIncluded>
-                        <jMeterTestFile>baidu.jmx</jMeterTestFile>
+                        <jMeterTestFile>Baidu1.jmx</jMeterTestFile>
                         <!--<jMeterTestFile>test2.jmx</jMeterTestFile>-->
                     </testFilesIncluded>
                     <resultsFileFormat>xml</resultsFileFormat>
