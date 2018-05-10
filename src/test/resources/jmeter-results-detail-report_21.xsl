@@ -30,7 +30,7 @@
 <!-- Defined parameters (overrideable) -->
 <xsl:param    name="showData" select="'n'"/>
 <xsl:param    name="titleReport" select="'Load Test Results'"/>
-<xsl:param    name="dateReport" select="'date not defined'"/>
+<xsl:param    name="dateReport" select="'2018-05-10'"/>
 
 <xsl:template match="testResults">
 	<html>
