@@ -66,42 +66,42 @@
         <finalName>sylar</finalName>
         <plugins>
             <plugin>
-                <groupId>com.lazerycode.jmeter</groupId>
-                <artifactId>jmeter-maven-plugin</artifactId>
-                <version>2.5.0</version>
+            <groupId>com.lazerycode.jmeter</groupId>
+            <artifactId>jmeter-maven-plugin</artifactId>
+            <version>2.5.0</version>
 
-                <executions>
-                    <!-- Run JMeter tests -->
-                    <execution>
-                        <id>jmeter-tests</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>jmeter</goal>
-                        </goals>
-                    </execution>
-                    <!-- Fail build on errors in test -->
-                    <execution>
-                        <id>jmeter-check-results</id>
-                        <goals>
-                            <goal>results</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <!--这里有大坑，慎设置参数-->
-                <configuration>
-                    <testFilesIncluded>
-                        <jMeterTestFile>Baidu1.jmx</jMeterTestFile>
-                        <!--<jMeterTestFile>test2.jmx</jMeterTestFile>-->
-                    </testFilesIncluded>
-                    <resultsFileFormat>xml</resultsFileFormat>
-                    <!--<generateReports>true</generateReports>-->
-                    <ignoreResultFailures>true</ignoreResultFailures>
-                    <testResultsTimestamp>true</testResultsTimestamp>
-                    <appendResultsTimestamp>true</appendResultsTimestamp>
-                    <resultsFileNameDateFormat>yyyy-MM-dd-HH-mm-ss</resultsFileNameDateFormat>
-                    <!--使用mvn verify –DskipTests=true来跳过不需要执行的脚本-->
-                    <!--<skipTests>${skipTests}</skipTests>-->
-                </configuration>
+            <executions>
+                <!-- Run JMeter tests -->
+                <execution>
+                    <id>jmeter-tests</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>jmeter</goal>
+                    </goals>
+                </execution>
+                <!-- Fail build on errors in test -->
+                <execution>
+                    <id>jmeter-check-results</id>
+                    <goals>
+                        <goal>results</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <!--这里有大坑，慎设置参数-->
+            <configuration>
+                <testFilesIncluded>
+                    <jMeterTestFile>Baidu1.jmx</jMeterTestFile>
+                    <!--<jMeterTestFile>test2.jmx</jMeterTestFile>-->
+                </testFilesIncluded>
+                <resultsFileFormat>xml</resultsFileFormat>
+                <!--<generateReports>false</generateReports>-->
+                <ignoreResultFailures>true</ignoreResultFailures>
+                <testResultsTimestamp>true</testResultsTimestamp>
+                <appendResultsTimestamp>true</appendResultsTimestamp>
+                <resultsFileNameDateFormat>yyyy-MM-dd-HH-mm-ss</resultsFileNameDateFormat>
+                <!--使用mvn verify –DskipTests=true来跳过不需要执行的脚本-->
+                <!--<skipTests>${skipTests}</skipTests>-->
+            </configuration>
             </plugin>
 
             <plugin>
