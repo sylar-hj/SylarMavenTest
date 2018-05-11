@@ -108,9 +108,9 @@
                 <resultsFileFormat>xml</resultsFileFormat>
                 <!--<generateReports>false</generateReports>-->
                 <ignoreResultFailures>true</ignoreResultFailures>
-                <testResultsTimestamp>true</testResultsTimestamp>
-                <appendResultsTimestamp>true</appendResultsTimestamp>
-                <resultsFileNameDateFormat>yyyy-MM-dd-HH-mm-ss</resultsFileNameDateFormat>
+                <testResultsTimestamp>false</testResultsTimestamp>
+                <!--<appendResultsTimestamp>true</appendResultsTimestamp>-->
+                <!--<resultsFileNameDateFormat>yyyy-MM-dd-HH-mm-ss</resultsFileNameDateFormat>-->
                 <!--使用mvn verify –DskipTests=true来跳过不需要执行的脚本-->
                 <!--<skipTests>${skipTests}</skipTests>-->
             </configuration>
